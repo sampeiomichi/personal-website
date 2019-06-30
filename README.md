@@ -1,1 +1,2 @@
-# sampeiomichi.github.io
+# Personal Website
+omichisampei.com
