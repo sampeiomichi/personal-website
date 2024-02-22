@@ -3,29 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>Sampei Omichi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            background-color: #fff;
+            font-size: 16px;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 960px;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #000;
+            grid-column: 1 / -1;
+        }
+
+        .left-half {
+            grid-column: 1 / span 6;
+        }
+
+        .right-half {
+            grid-column: 7 / span 6;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover, a:focus {
+            color: #f00;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            .left-half, .right-half {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="social-media-links">
-            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <!-- Add more links as needed -->
-        </nav>
-    </header>
-    <main>
-        <section class="photo">
-            <img src="your-photo.jpg" alt="Your Name">
-        </section>
-        <section class="about-me">
-            <h1>Your Name</h1>
-            <p>
-                Brief description about you and your work. You can talk about your interests,
-                what you do, and any projects or achievements you'd like to highlight.
-            </p>
-        </section>
-    </main>
+    <div class="container">
+        <div class="full-width">
+            <h1>Sampei Omichi</h1>
+        </div>
+        <hr>
+        <div class="left-half">
+            <p>About</p>
+        </div>
+        <div class="right-half">
+            <p>I am the Founder & CEO of <a href="https://www.ellis.com/" target="_blank">Ellis</a> where we are building the migration infrastructure for <a href="https://nymag.com/intelligencer/2020/08/one-billion-americans-by-matthew-yglesias-book-excerpt.html" target="_blank">One Billion Americans</a>. I used to work at <a href="https://river.com/" target="_blank">River</a> doing product.</p>
+            <p>I am a native of Ho Chi Minh City (HCMC), Vietnam with a Japanese father and a Vietnamese mother. I spent the first 17 years of my life in HCMC attending an international school, surrounded by a diaspora of Western influences and diverse cultures. In 2017, I unrooted my life and moved half way across the world to Boston, Massachusetts where I experienced my first real winter. I now spend most of my time between Ho Chi Minh City, San Francisco, and New York.</p>
+        </div>
+        <hr>
+    </div>
 </body>
 </html>
